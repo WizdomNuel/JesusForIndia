@@ -8,6 +8,7 @@ import Donate from './pages/Donate';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ScrollToTopButton from './components/ScrollToTopButton';
+import { ThemeProvider } from './context/ThemeContext';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -19,22 +20,24 @@ const ScrollToTop = () => {
 
 const App: React.FC = () => {
   return (
-    <Router>
-      <ScrollToTop />
-      <div className="flex flex-col min-h-screen">
-        <Navbar />
-        <main className="flex-grow">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/media" element={<Media />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/donate" element={<Donate />} />
-          </Routes>
-        </main>
-        <Footer />
-        <ScrollToTopButton />
-      </div>
-    </Router>
+    <ThemeProvider>
+      <Router>
+        <ScrollToTop />
+        <div className="flex flex-col min-h-screen bg-[#fdfcf9] dark:bg-[#0f172a] transition-colors duration-500">
+          <Navbar />
+          <main className="flex-grow">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/media" element={<Media />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/donate" element={<Donate />} />
+            </Routes>
+          </main>
+          <Footer />
+          <ScrollToTopButton />
+        </div>
+      </Router>
+    </ThemeProvider>
   );
 };
 
