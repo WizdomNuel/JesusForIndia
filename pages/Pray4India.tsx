@@ -314,17 +314,17 @@ const App: React.FC = () => {
                 transition={{ type: "spring", stiffness: 120, damping: 20 }}
                 className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl border-b border-slate-100 dark:border-slate-800"
             >
-                <div className="max-w-7xl mx-auto px-4 md:px-6 flex justify-between items-center h-20">
+                <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 flex justify-between items-center h-16 sm:h-18 md:h-20">
                     <motion.div
                         whileHover={{ scale: 1.02 }}
-                        className="flex items-center gap-3 cursor-pointer group"
+                        className="flex items-center gap-2 sm:gap-3 cursor-pointer group"
                         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                     >
-                        <div className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 bg-orange-600 rounded-xl flex items-center justify-center text-white font-black shadow-lg transition-transform group-hover:rotate-12">P</div>
-                        <span className="text-lg md:text-xl lg:text-2xl font-black tracking-tighter font-heavy uppercase">Pray4India</span>
+                        <div className="w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 bg-orange-600 rounded-lg sm:rounded-xl flex items-center justify-center text-white font-black shadow-lg transition-transform group-hover:rotate-12 text-sm sm:text-base md:text-lg lg:text-xl">P</div>
+                        <span className="text-base sm:text-lg md:text-xl lg:text-2xl font-black tracking-tighter font-heavy uppercase">Pray4India</span>
                     </motion.div>
 
-                    <nav className="hidden lg:flex gap-10 items-center">
+                    <nav className="hidden lg:flex gap-6 xl:gap-10 items-center">
                         <button onClick={() => scrollToSection('how-it-works')} className="text-sm font-bold text-slate-500 dark:text-slate-400 hover:text-orange-600 dark:hover:text-orange-500 transition-colors uppercase tracking-widest">{t.nav.how}</button>
                         <button onClick={() => scrollToSection('benefits')} className="text-sm font-bold text-slate-500 dark:text-slate-400 hover:text-orange-600 dark:hover:text-orange-500 transition-colors uppercase tracking-widest">{t.nav.benefits}</button>
                         <button onClick={() => scrollToSection('contact')} className="text-sm font-bold text-slate-500 dark:text-slate-400 hover:text-orange-600 dark:hover:text-orange-500 transition-colors uppercase tracking-widest">{t.nav.contact}</button>
@@ -379,75 +379,75 @@ const App: React.FC = () => {
                 </AnimatePresence>
             </motion.header>
 
-            <section className="relative min-h-screen pt-32 pb-20 flex items-center overflow-hidden">
+            <section className="relative min-h-screen pt-20 sm:pt-24 md:pt-28 lg:pt-32 pb-12 sm:pb-16 md:pb-20 flex items-center overflow-hidden px-4 sm:px-6">
                 <FloatingParticles count={10} color="bg-orange-400" blur="blur-[80px]" speedRange={[30, 50]} />
-                <div className="max-w-7xl mx-auto px-6 relative z-10 w-full flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+                <div className="max-w-7xl mx-auto px-2 sm:px-4 md:px-6 relative z-10 w-full flex flex-col lg:flex-row items-center gap-8 sm:gap-12 md:gap-16 lg:gap-24">
                     <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="lg:flex-1 text-center lg:text-left">
-                        <div className="inline-flex items-center gap-3 px-4 py-2 bg-orange-600/10 text-orange-600 dark:text-orange-400 rounded-full text-xs font-bold mb-8 uppercase tracking-[0.2em]">
-                            <span className="w-2.5 h-2.5 bg-orange-600 dark:bg-orange-500 rounded-full animate-pulse"></span>
+                        <div className="inline-flex items-center gap-2 sm:gap-3 px-3 sm:px-4 py-1.5 sm:py-2 bg-orange-600/10 text-orange-600 dark:text-orange-400 rounded-full text-[10px] sm:text-xs font-bold mb-6 sm:mb-8 uppercase tracking-[0.15em] sm:tracking-[0.2em]">
+                            <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 bg-orange-600 dark:bg-orange-500 rounded-full animate-pulse"></span>
                             {t.hero.tag}
                         </div>
-                        <h1 className="text-5xl lg:text-8xl font-serif font-bold text-slate-900 dark:text-white leading-[1.05] mb-8 uppercase tracking-tighter">
+                        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-serif font-bold text-slate-900 dark:text-white leading-[1.05] mb-6 sm:mb-8 uppercase tracking-tighter">
                             {t.hero.title} <br />
-                            <span className="text-orange-600 dark:text-orange-500 italic block mt-2">{t.hero.titleItalic}</span>
+                            <span className="text-orange-600 dark:text-orange-500 italic block mt-1 sm:mt-2">{t.hero.titleItalic}</span>
                         </h1>
-                        <p className="text-lg lg:text-2xl text-slate-600 dark:text-slate-400 mb-12 max-w-xl leading-relaxed font-medium mx-auto lg:mx-0">{t.hero.desc}</p>
-                        <div className="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start w-full sm:w-auto">
-                            <button onClick={() => scrollToSection('join')} className="w-full sm:w-auto px-10 py-5 bg-orange-600 text-white font-bold rounded-2xl shadow-xl flex items-center justify-center gap-3 uppercase tracking-widest">
-                                {t.hero.ctaPrimary} <ChevronRight className="w-6 h-6" />
+                        <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-600 dark:text-slate-400 mb-8 sm:mb-10 md:mb-12 max-w-xl leading-relaxed font-medium mx-auto lg:mx-0">{t.hero.desc}</p>
+                        <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 justify-center lg:justify-start w-full sm:w-auto">
+                            <button onClick={() => scrollToSection('join')} className="w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 bg-orange-600 text-white font-bold rounded-xl sm:rounded-2xl shadow-xl flex items-center justify-center gap-2 sm:gap-3 uppercase tracking-widest text-sm sm:text-base">
+                                {t.hero.ctaPrimary} <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
                             </button>
-                            <button onClick={() => scrollToSection('how-it-works')} className="w-full sm:w-auto px-10 py-5 bg-white dark:bg-slate-950 text-slate-900 dark:text-white font-bold rounded-2xl border border-slate-200 dark:border-slate-800 uppercase tracking-widest">
+                            <button onClick={() => scrollToSection('how-it-works')} className="w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 bg-white dark:bg-slate-950 text-slate-900 dark:text-white font-bold rounded-xl sm:rounded-2xl border border-slate-200 dark:border-slate-800 uppercase tracking-widest text-sm sm:text-base">
                                 {t.hero.ctaSecondary}
                             </button>
                         </div>
                     </motion.div>
                     <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }} className="lg:flex-1 w-full max-w-xl aspect-square relative">
-                        <div className="w-full h-full rounded-[4rem] bg-gradient-to-br from-orange-500 to-orange-700 shadow-2xl flex flex-col items-center justify-center p-12 text-center text-white/90">
-                            <Users className="w-16 h-16 text-white mb-8" />
-                            <p className="text-sm font-bold mb-2 uppercase tracking-[0.2em] opacity-80">{t.hero.statsLabel}</p>
-                            <p className="text-5xl lg:text-7xl font-serif font-bold uppercase">{t.hero.statsValue}</p>
+                        <div className="w-full h-full rounded-[2rem] sm:rounded-[3rem] md:rounded-[3.5rem] lg:rounded-[4rem] bg-gradient-to-br from-orange-500 to-orange-700 shadow-2xl flex flex-col items-center justify-center p-8 sm:p-10 md:p-12 text-center text-white/90">
+                            <Users className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-white mb-6 sm:mb-8" />
+                            <p className="text-xs sm:text-sm font-bold mb-2 uppercase tracking-[0.15em] sm:tracking-[0.2em] opacity-80">{t.hero.statsLabel}</p>
+                            <p className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif font-bold uppercase">{t.hero.statsValue}</p>
                         </div>
                     </motion.div>
                 </div>
             </section>
 
-            <section id="how-it-works" className="py-24 bg-slate-50 dark:bg-slate-900/50">
-                <div className="max-w-7xl mx-auto px-6">
-                    <div className="text-center mb-20">
-                        <h2 className="text-4xl lg:text-6xl font-bold mb-6 uppercase tracking-tighter">{t.how.title}</h2>
-                        <p className="text-lg lg:text-2xl text-slate-500 dark:text-slate-400 max-w-3xl mx-auto">{t.how.desc}</p>
+            <section id="how-it-works" className="py-12 sm:py-16 md:py-20 lg:py-24 bg-slate-50 dark:bg-slate-900/50">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6">
+                    <div className="text-center mb-12 sm:mb-16 md:mb-20">
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 uppercase tracking-tighter">{t.how.title}</h2>
+                        <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-500 dark:text-slate-400 max-w-3xl mx-auto px-4">{t.how.desc}</p>
                     </div>
-                    <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} className="grid md:grid-cols-3 gap-10">
+                    <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} className="grid md:grid-cols-3 gap-6 sm:gap-8 md:gap-10">
                         {[
                             { icon: <Globe />, title: t.how.step1, text: t.how.step1Desc },
                             { icon: <Clock />, title: t.how.step2, text: t.how.step2Desc },
                             { icon: <Send />, title: t.how.step3, text: t.how.step3Desc }
                         ].map((step, idx) => (
-                            <motion.div variants={itemVariants} key={idx} className="p-10 bg-white dark:bg-slate-800 rounded-[3.5rem] shadow-xl border border-slate-100 dark:border-slate-700 flex flex-col items-center text-center">
-                                <div className="w-20 h-20 bg-orange-600/10 text-orange-600 rounded-2xl flex items-center justify-center mb-8">{step.icon}</div>
-                                <h3 className="text-xl font-bold mb-4 uppercase">{step.title}</h3>
-                                <p className="text-lg text-slate-500 dark:text-slate-400">{step.text}</p>
+                            <motion.div variants={itemVariants} key={idx} className="p-6 sm:p-8 md:p-10 bg-white dark:bg-slate-800 rounded-[2rem] sm:rounded-[2.5rem] md:rounded-[3rem] lg:rounded-[3.5rem] shadow-xl border border-slate-100 dark:border-slate-700 flex flex-col items-center text-center">
+                                <div className="w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 bg-orange-600/10 text-orange-600 rounded-xl sm:rounded-2xl flex items-center justify-center mb-6 sm:mb-8">{step.icon}</div>
+                                <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 uppercase">{step.title}</h3>
+                                <p className="text-sm sm:text-base md:text-lg text-slate-500 dark:text-slate-400">{step.text}</p>
                             </motion.div>
                         ))}
                     </motion.div>
                 </div>
             </section>
 
-            <section className="py-24 bg-slate-950 text-white relative">
-                <div className="max-w-7xl mx-auto px-6">
-                    <div className="grid lg:grid-cols-2 gap-20 items-center">
+            <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-slate-950 text-white relative">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6">
+                    <div className="grid lg:grid-cols-2 gap-12 sm:gap-16 md:gap-20 items-center">
                         <div>
-                            <h2 className="text-4xl lg:text-6xl font-bold mb-8 uppercase tracking-tighter">{t.preview.title}</h2>
-                            <p className="text-lg lg:text-2xl text-slate-400 mb-12">{t.preview.desc}</p>
-                            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 sm:mb-8 uppercase tracking-tighter">{t.preview.title}</h2>
+                            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-400 mb-8 sm:mb-10 md:mb-12">{t.preview.desc}</p>
+                            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
                                 {LANGUAGES.map(lang => (
-                                    <button key={lang} onClick={() => setSelectedLang(lang)} className={`px-5 py-4 rounded-xl text-xs font-bold border transition-all uppercase ${selectedLang === lang ? 'bg-orange-600 text-white border-orange-500 shadow-xl' : 'bg-white/5 text-slate-400 border-white/10 hover:bg-white/10'}`}>
+                                    <button key={lang} onClick={() => setSelectedLang(lang)} className={`px-3 sm:px-4 md:px-5 py-3 sm:py-4 rounded-lg sm:rounded-xl text-[10px] sm:text-xs font-bold border transition-all uppercase ${selectedLang === lang ? 'bg-orange-600 text-white border-orange-500 shadow-xl' : 'bg-white/5 text-slate-400 border-white/10 hover:bg-white/10'}`}>
                                         {lang}
                                     </button>
                                 ))}
                             </div>
                         </div>
-                        <div className="bg-white/5 backdrop-blur-3xl border border-white/10 p-10 lg:p-14 rounded-[4rem] shadow-2xl min-h-[500px] flex flex-col">
+                        <div className="bg-white/5 backdrop-blur-3xl border border-white/10 p-6 sm:p-8 md:p-10 lg:p-14 rounded-[2rem] sm:rounded-[3rem] md:rounded-[3.5rem] lg:rounded-[4rem] shadow-2xl min-h-[400px] sm:min-h-[450px] md:min-h-[500px] flex flex-col">
                             <div className="flex justify-between items-center mb-10 border-b border-white/10 pb-6">
                                 <div className="flex items-center gap-3"><div className="w-10 h-10 bg-orange-600 rounded-lg flex items-center justify-center font-bold">P</div><span className="uppercase tracking-tighter text-sm font-bold">Preview</span></div>
                                 <button onClick={handleManualRefresh} disabled={isLoadingPrayer || refreshCooldown} className={`p-2 rounded-full transition-all ${refreshCooldown ? 'text-slate-600' : 'text-orange-500 hover:bg-white/10'}`}>
@@ -506,14 +506,14 @@ const App: React.FC = () => {
                 </div>
             </section>
 
-            <section id="join" className="py-24 bg-white dark:bg-slate-950">
-                <div className="max-w-5xl mx-auto px-6">
-                    <div className="bg-white dark:bg-slate-900 rounded-[2.5rem] md:rounded-[4rem] shadow-2xl overflow-hidden border border-slate-100 dark:border-slate-800">
-                        <div className="p-6 md:p-20 text-center bg-slate-900 dark:bg-black text-white">
-                            <h2 className="text-3xl lg:text-4xl font-bold mb-6 tracking-tighter uppercase">{t.join.title}</h2>
-                            <p className="text-lg lg:text-xs text-slate-400 max-w-2xl mx-auto">{t.join.desc}</p>
+            <section id="join" className="py-12 sm:py-16 md:py-20 lg:py-24 bg-white dark:bg-slate-950">
+                <div className="max-w-5xl mx-auto px-4 sm:px-6">
+                    <div className="bg-white dark:bg-slate-900 rounded-[1.5rem] sm:rounded-[2rem] md:rounded-[2.5rem] lg:rounded-[3rem] xl:rounded-[4rem] shadow-2xl overflow-hidden border border-slate-100 dark:border-slate-800">
+                        <div className="p-6 sm:p-8 md:p-12 lg:p-20 text-center bg-slate-900 dark:bg-black text-white">
+                            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 tracking-tighter uppercase">{t.join.title}</h2>
+                            <p className="text-sm sm:text-base md:text-lg lg:text-xs text-slate-400 max-w-2xl mx-auto">{t.join.desc}</p>
                         </div>
-                        <div className="p-5 md:p-24">
+                        <div className="p-4 sm:p-5 md:p-12 lg:p-20 xl:p-24">
                             <AnimatePresence mode="wait">
                                 {formStatus === 'success' ? (
                                     <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="text-center py-10">
@@ -634,8 +634,8 @@ const App: React.FC = () => {
 
             <AnimatePresence>
                 {showScrollTop && (
-                    <motion.button initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.8 }} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="fixed bottom-10 right-10 z-[60] w-14 h-14 bg-orange-600 text-white rounded-2xl shadow-2xl flex items-center justify-center group" aria-label="Scroll to top">
-                        <ArrowUp className="w-7 h-7 group-hover:-translate-y-2 transition-transform" />
+                    <motion.button initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.8 }} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 md:bottom-10 md:right-10 z-[60] w-12 h-12 sm:w-14 sm:h-14 bg-orange-600 text-white rounded-xl sm:rounded-2xl shadow-2xl flex items-center justify-center group" aria-label="Scroll to top">
+                        <ArrowUp className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 group-hover:-translate-y-2 transition-transform" />
                     </motion.button>
                 )}
             </AnimatePresence>

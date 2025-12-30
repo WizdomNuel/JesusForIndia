@@ -36,6 +36,23 @@
             overflow-x: hidden;
             position: relative;
             transition: background-color 0.5s ease, color 0.5s ease;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        /* Mobile-specific improvements */
+        @media (max-width: 640px) {
+            * {
+                -webkit-tap-highlight-color: transparent;
+            }
+            
+            button, a {
+                touch-action: manipulation;
+            }
+            
+            input, textarea, select {
+                font-size: 16px !important; /* Prevents zoom on iOS */
+            }
         }
         .serif {
             font-family: 'Merriweather', serif;
