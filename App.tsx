@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Media from './pages/Media';
 import Contact from './pages/Contact';
 import Donate from './pages/Donate';
+import Pray4India from './pages/Pray4India';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ScrollToTopButton from './components/ScrollToTopButton';
@@ -31,6 +32,7 @@ const App: React.FC = () => {
               <Route path="/media" element={<Media />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/donate" element={<Donate />} />
+              <Route path="/pray4india" element={<Pray4India />} />
             </Routes>
           </main>
           <Footer />

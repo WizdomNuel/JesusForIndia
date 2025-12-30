@@ -18,6 +18,7 @@ const Navbar: React.FC = () => {
   const navLinks = [
     { name: 'Our Mission', path: '/' },
     { name: 'Field Stories', path: '/media' },
+    { name: 'Pray4India', path: '/pray4india' },
     { name: 'Donate', path: '/donate' },
     { name: 'Get in Touch', path: '/contact' },
   ];
