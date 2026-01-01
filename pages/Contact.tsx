@@ -54,7 +54,7 @@ const Contact: React.FC = () => {
               <div className="space-y-6 sm:space-y-8 md:space-y-10">
                 {[
                   { label: "Missions Hub", val: "Raipur, Chhattisgarh, India", icon: "📍" },
-                  { label: "Email Support", val: "contact@jesusforindia.org", icon: "✉️" },
+                  { label: "Email Support", val: "info@jesus4india.com", icon: "✉️" },
                   { label: "Hours of Prayer", val: "Sun-Sat: 24h Availability", icon: "🕒" },
                 ].map((item, i) => (
                   <div key={i} className="flex items-center space-x-4 sm:space-x-6 md:space-x-8 group">

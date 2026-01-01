@@ -32,9 +32,11 @@ const Navbar: React.FC = () => {
           <div className="flex items-center justify-between h-14 sm:h-16 px-2 sm:px-4">
             <div className="flex items-center">
               <Link to="/" className="flex items-center space-x-1 sm:space-x-2 group">
-                <span className="text-lg sm:text-xl md:text-2xl font-black serif text-slate-800 dark:text-white tracking-tight group-hover:text-orange-700 transition-colors duration-300">
-                  Jesus<span className="text-orange-600 font-bold italic">For</span>India
-                </span>
+                <img
+                  src="/logo.png"
+                  alt="Jesus For India"
+                  className="h-10 sm:h-12 md:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                />
               </Link>
             </div>
 

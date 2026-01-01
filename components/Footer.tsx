@@ -8,9 +8,11 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="grid md:grid-cols-12 gap-8 sm:gap-12 md:gap-16 mb-12 sm:mb-16 md:mb-20 lg:mb-24">
           <div className="md:col-span-5">
-            <h2 className="text-2xl sm:text-3xl font-black serif text-slate-800 dark:text-slate-100 mb-6 sm:mb-8 tracking-tight">
-              Jesus<span className="text-orange-600 italic">For</span>India
-            </h2>
+            <img
+              src="/logo.png"
+              alt="Jesus For India"
+              className="h-24 sm:h-32 md:h-40 w-auto object-contain mb-6 sm:mb-8"
+            />
             <p className="text-slate-500 dark:text-slate-400 text-base sm:text-lg leading-relaxed max-w-sm mb-6 sm:mb-8 md:mb-10 serif italic">
               Sharing the hope of the Gospel and empowering local communities through faith and holistic ministry.
             </p>
@@ -41,11 +43,11 @@ const Footer: React.FC = () => {
               </ul>
             </div>
             <div className="col-span-2 sm:col-span-1">
-               <h3 className="text-[9px] sm:text-[10px] font-bold text-slate-800 dark:text-slate-100 uppercase tracking-widest mb-4 sm:mb-6 md:mb-8">Reach Out</h3>
-               <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 serif italic mb-4 sm:mb-6">Connect with us for partnerships or prayer.</p>
-               <a href="#" className="inline-block px-6 sm:px-8 py-2 sm:py-3 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full text-[9px] sm:text-[10px] font-bold text-slate-700 dark:text-slate-300 uppercase tracking-widest hover:bg-slate-100 dark:hover:bg-slate-700 transition-all">
-                 Message Us
-               </a>
+              <h3 className="text-[9px] sm:text-[10px] font-bold text-slate-800 dark:text-slate-100 uppercase tracking-widest mb-4 sm:mb-6 md:mb-8">Reach Out</h3>
+              <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 serif italic mb-4 sm:mb-6">Connect with us for partnerships or prayer.</p>
+              <a href="#" className="inline-block px-6 sm:px-8 py-2 sm:py-3 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full text-[9px] sm:text-[10px] font-bold text-slate-700 dark:text-slate-300 uppercase tracking-widest hover:bg-slate-100 dark:hover:bg-slate-700 transition-all">
+                Message Us
+              </a>
             </div>
           </div>
         </div>
@@ -53,9 +55,9 @@ const Footer: React.FC = () => {
         <div className="pt-8 sm:pt-10 md:pt-12 border-t border-slate-100 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center text-[9px] sm:text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest gap-4">
           <div className="text-center md:text-left">© {new Date().getFullYear()} Jesus For India • Sowing Seeds of Hope</div>
           <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 md:gap-8">
-             <span className="hover:text-slate-800 dark:hover:text-slate-300 cursor-pointer transition-colors">Grace Alone</span>
-             <span className="hover:text-slate-800 dark:hover:text-slate-300 cursor-pointer transition-colors">Faith Alone</span>
-             <span className="hover:text-slate-800 dark:hover:text-slate-300 cursor-pointer transition-colors">Christ Alone</span>
+            <span className="hover:text-slate-800 dark:hover:text-slate-300 cursor-pointer transition-colors">Grace Alone</span>
+            <span className="hover:text-slate-800 dark:hover:text-slate-300 cursor-pointer transition-colors">Faith Alone</span>
+            <span className="hover:text-slate-800 dark:hover:text-slate-300 cursor-pointer transition-colors">Christ Alone</span>
           </div>
         </div>
       </div>

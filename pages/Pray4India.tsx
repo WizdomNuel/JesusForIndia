@@ -30,7 +30,7 @@ const EMAILJS_SERVICE_ID = "service_fc6q465";
 const EMAILJS_TEMPLATE_ID = "template_p8qjmmc"; // Template for the join/welcome email
 const EMAILJS_PUBLIC_KEY = "Jwwadl8l3hZ7X-1zX"; // ← REPLACE THIS WITH YOUR PUBLIC KEY
 const EMAILJS_CONTACT_TEMPLATE_ID = "template_p8qjmmc"; // Template for contact form
-const TARGET_EMAIL = "wisdomnuelmmesoma@gmail.com";
+const TARGET_EMAIL = "info@jesus4india.com";
 
 // Initialize EmailJS
 emailjs.init(EMAILJS_PUBLIC_KEY);
@@ -320,8 +320,11 @@ const App: React.FC = () => {
                         className="flex items-center gap-2 sm:gap-3 cursor-pointer group"
                         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                     >
-                        <div className="w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 bg-orange-600 rounded-lg sm:rounded-xl flex items-center justify-center text-white font-black shadow-lg transition-transform group-hover:rotate-12 text-sm sm:text-base md:text-lg lg:text-xl">P</div>
-                        <span className="text-base sm:text-lg md:text-xl lg:text-2xl font-black tracking-tighter font-heavy uppercase">Pray4India</span>
+                        <img
+                            src="/logo.png"
+                            alt="Pray4India"
+                            className="h-12 sm:h-14 md:h-16 w-auto object-contain transition-transform group-hover:scale-105"
+                        />
                     </motion.div>
 
                     <nav className="hidden lg:flex gap-6 xl:gap-10 items-center">
@@ -449,7 +452,10 @@ const App: React.FC = () => {
                         </div>
                         <div className="bg-white/5 backdrop-blur-3xl border border-white/10 p-6 sm:p-8 md:p-10 lg:p-14 rounded-[2rem] sm:rounded-[3rem] md:rounded-[3.5rem] lg:rounded-[4rem] shadow-2xl min-h-[400px] sm:min-h-[450px] md:min-h-[500px] flex flex-col">
                             <div className="flex justify-between items-center mb-10 border-b border-white/10 pb-6">
-                                <div className="flex items-center gap-3"><div className="w-10 h-10 bg-orange-600 rounded-lg flex items-center justify-center font-bold">P</div><span className="uppercase tracking-tighter text-sm font-bold">Preview</span></div>
+                                <div className="flex items-center gap-3">
+                                    <img src="/logo.png" alt="Pray4India" className="h-12 w-auto object-contain" />
+                                    <span className="uppercase tracking-tighter text-sm font-bold">Preview</span>
+                                </div>
                                 <button onClick={handleManualRefresh} disabled={isLoadingPrayer || refreshCooldown} className={`p-2 rounded-full transition-all ${refreshCooldown ? 'text-slate-600' : 'text-orange-500 hover:bg-white/10'}`}>
                                     <RefreshCw className={`w-5 h-5 ${isLoadingPrayer ? 'animate-spin' : ''}`} />
                                 </button>
@@ -563,7 +569,7 @@ const App: React.FC = () => {
                                 <Mail className="w-5 h-5 md:w-6 md:h-6 text-orange-600 flex-shrink-0" />
                                 <div className="min-w-0">
                                     <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest leading-none mb-1">{t.contact.support}</div>
-                                    <a href="mailto:wisdomnuelmmesoma@gmail.com" className="text-xs md:text-[10px] lg:text-[10px] font-bold uppercase truncate sm:whitespace-normal block">wisdomnuelmmesoma@gmail.com</a>
+                                    <a href="mailto:info@jesus4india.com" className="text-xs md:text-[10px] lg:text-[10px] font-bold uppercase truncate sm:whitespace-normal block">info@jesus4india.com</a>
                                 </div>
                             </div>
                         </div>
@@ -592,8 +598,11 @@ const App: React.FC = () => {
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-16 mb-24">
                         <div className="col-span-1 lg:col-span-2">
                             <div className="flex items-center gap-5 mb-12 cursor-pointer group" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-                                <div className="w-14 h-14 bg-orange-600 rounded-2xl flex items-center justify-center text-white font-black text-4xl shadow-2xl group-hover:rotate-12 group-hover:scale-110 transition-all">P</div>
-                                <span className="text-3xl lg:text-5xl font-bold text-white tracking-tighter uppercase">Pray4India</span>
+                                <img
+                                    src="/logo.png"
+                                    alt="Pray4India"
+                                    className="h-32 sm:h-40 lg:h-48 w-auto object-contain transition-transform group-hover:scale-105"
+                                />
                             </div>
                             <p className="text-xl lg:text-sm text-slate-400 max-w-sm leading-relaxed font-light italic opacity-80">{t.footer.desc}</p>
                         </div>
