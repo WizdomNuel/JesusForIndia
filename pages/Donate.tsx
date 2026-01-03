@@ -136,6 +136,15 @@ const Donate: React.FC = () => {
                 Secure SSL Encrypted
               </p>
             </div>
+
+            <div className="mt-8 pt-8 border-t border-slate-100 dark:border-slate-700">
+              <h4 className="text-base sm:text-lg font-bold text-slate-800 dark:text-slate-100 mb-4 text-center serif">Direct Bank Transfer (Nigeria)</h4>
+              <div className="bg-slate-50 dark:bg-slate-900 rounded-xl p-4 sm:p-6 text-center space-y-2 border border-slate-100 dark:border-slate-700">
+                <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wider">Zenith Bank</p>
+                <p className="text-xl sm:text-2xl font-black text-slate-800 dark:text-slate-100 tracking-widest select-all">1229667302</p>
+                <p className="text-[10px] sm:text-xs text-slate-400 dark:text-slate-500 font-medium uppercase tracking-widest">Making Christ Known to All Mission</p>
+              </div>
+            </div>
           </div>
         </div>
 

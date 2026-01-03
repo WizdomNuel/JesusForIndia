@@ -19,25 +19,34 @@ const ScrollToTop = () => {
   return null;
 };
 
+const Layout = () => {
+  const location = useLocation();
+  const isPray4India = location.pathname === '/pray4india';
+
+  return (
+    <div className="flex flex-col min-h-screen bg-[#fdfcf9] dark:bg-[#0f172a] transition-colors duration-500">
+      {!isPray4India && <Navbar />}
+      <main className="flex-grow">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/media" element={<Media />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/donate" element={<Donate />} />
+          <Route path="/pray4india" element={<Pray4India />} />
+        </Routes>
+      </main>
+      {!isPray4India && <Footer />}
+      <ScrollToTopButton />
+    </div>
+  );
+};
+
 const App: React.FC = () => {
   return (
     <ThemeProvider>
       <Router>
         <ScrollToTop />
-        <div className="flex flex-col min-h-screen bg-[#fdfcf9] dark:bg-[#0f172a] transition-colors duration-500">
-          <Navbar />
-          <main className="flex-grow">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/media" element={<Media />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/donate" element={<Donate />} />
-              <Route path="/pray4india" element={<Pray4India />} />
-            </Routes>
-          </main>
-          <Footer />
-          <ScrollToTopButton />
-        </div>
+        <Layout />
       </Router>
     </ThemeProvider>
   );

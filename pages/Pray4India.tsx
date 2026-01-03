@@ -323,7 +323,7 @@ const App: React.FC = () => {
                         <img
                             src="/logo.png"
                             alt="Pray4India"
-                            className="h-12 sm:h-14 md:h-16 w-auto object-contain transition-transform group-hover:scale-105"
+                            className="h-16 sm:h-20 md:h-24 w-auto object-contain transition-transform group-hover:scale-105"
                         />
                     </motion.div>
 

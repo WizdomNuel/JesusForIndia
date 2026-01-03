@@ -29,13 +29,13 @@ const Navbar: React.FC = () => {
     <nav className={`fixed top-0 w-full z-50 transition-all duration-700 ${scrolled ? 'py-2 sm:py-3' : 'py-4 sm:py-6'}`}>
       <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
         <div className={`rounded-2xl sm:rounded-3xl transition-all duration-700 ${scrolled ? 'glass px-3 sm:px-4 shadow-xl border-black/5 dark:border-white/5' : 'bg-transparent border-transparent'}`}>
-          <div className="flex items-center justify-between h-14 sm:h-16 px-2 sm:px-4">
+          <div className="flex items-center justify-between h-20 sm:h-24 md:h-28 px-2 sm:px-4">
             <div className="flex items-center">
               <Link to="/" className="flex items-center space-x-1 sm:space-x-2 group">
                 <img
                   src="/logo.png"
                   alt="Jesus For India"
-                  className="h-10 sm:h-12 md:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                  className="h-24 sm:h-28 md:h-32 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
                 />
               </Link>
             </div>
