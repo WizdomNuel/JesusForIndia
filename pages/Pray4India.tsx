@@ -15,10 +15,25 @@ import {
     ArrowUp,
     RefreshCw,
     Facebook,
-    Twitter,
     Instagram,
-    Youtube
+    Youtube,
+    Phone
 } from 'lucide-react';
+
+const TikTokIcon = ({ className }: { className?: string }) => (
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className={className}
+    >
+        <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5v4a9 9 0 0 1-9-9Z" />
+    </svg>
+);
 import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { LANGUAGES, Language, PrayerPoint } from '../types';
 import { generateSamplePrayerPoint } from '../services/geminiService';
@@ -572,6 +587,13 @@ const App: React.FC = () => {
                                     <a href="mailto:info@jesus4india.com" className="text-xs md:text-[10px] lg:text-[10px] font-bold uppercase truncate sm:whitespace-normal block">info@jesus4india.com</a>
                                 </div>
                             </div>
+                            <div className="pt-6 md:pt-8 flex items-center gap-4 md:gap-10">
+                                <Phone className="w-5 h-5 md:w-6 md:h-6 text-orange-600 flex-shrink-0" />
+                                <div className="min-w-0">
+                                    <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest leading-none mb-1">Call us on:</div>
+                                    <a href="tel:+2349123656683" className="text-xs md:text-[10px] lg:text-[10px] font-bold uppercase truncate sm:whitespace-normal block">+234 912 365 6683</a>
+                                </div>
+                            </div>
                         </div>
                         <div className="bg-slate-50 dark:bg-slate-900 p-4 sm:p-6 md:p-12 lg:p-20 rounded-xl md:rounded-[4rem] border dark:border-slate-800 shadow-2xl">
                             <form onSubmit={handleContactSubmit} className="space-y-4 md:space-y-10">
@@ -616,16 +638,16 @@ const App: React.FC = () => {
                         <div>
                             <h4 className="text-white font-bold text-sm uppercase tracking-widest mb-12">{t.footer.connect || "Connect"}</h4>
                             <div className="flex gap-4">
-                                <a href="#" className="w-12 h-12 rounded-2xl bg-white/5 hover:bg-orange-600 flex items-center justify-center transition-all text-white group">
+                                <a href="https://www.facebook.com/share/1GK8MHSHPY/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-2xl bg-white/5 hover:bg-orange-600 flex items-center justify-center transition-all text-white group">
                                     <Facebook className="w-5 h-5 group-hover:scale-110 transition-transform" />
                                 </a>
-                                <a href="#" className="w-12 h-12 rounded-2xl bg-white/5 hover:bg-orange-600 flex items-center justify-center transition-all text-white group">
-                                    <Twitter className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                                <a href="https://www.tiktok.com/@mckmission?_r=1&_t=ZS-93pCGUBIp3l" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-2xl bg-white/5 hover:bg-orange-600 flex items-center justify-center transition-all text-white group">
+                                    <TikTokIcon className="w-5 h-5 group-hover:scale-110 transition-transform" />
                                 </a>
-                                <a href="#" className="w-12 h-12 rounded-2xl bg-white/5 hover:bg-orange-600 flex items-center justify-center transition-all text-white group">
+                                <a href="https://www.instagram.com/mckmission?igsh=MWc4ZnlxMGtnaXZodg==" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-2xl bg-white/5 hover:bg-orange-600 flex items-center justify-center transition-all text-white group">
                                     <Instagram className="w-5 h-5 group-hover:scale-110 transition-transform" />
                                 </a>
-                                <a href="#" className="w-12 h-12 rounded-2xl bg-white/5 hover:bg-orange-600 flex items-center justify-center transition-all text-white group">
+                                <a href="https://youtube.com/@mckmission?si=qg14RCHSxKQYL07Y" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-2xl bg-white/5 hover:bg-orange-600 flex items-center justify-center transition-all text-white group">
                                     <Youtube className="w-5 h-5 group-hover:scale-110 transition-transform" />
                                 </a>
                             </div>

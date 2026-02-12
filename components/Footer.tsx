@@ -1,6 +1,22 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Facebook, Instagram, Youtube } from 'lucide-react';
+
+const TikTokIcon = ({ className }: { className?: string }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+  >
+    <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5v4a9 9 0 0 1-9-9Z" />
+  </svg>
+);
 
 const Footer: React.FC = () => {
   return (
@@ -17,11 +33,22 @@ const Footer: React.FC = () => {
               Sharing the hope of the Gospel and empowering local communities through faith and holistic ministry.
             </p>
             <div className="flex space-x-4 sm:space-x-6">
-              {['FB', 'IG', 'YT'].map((s) => (
-                <a key={s} href="#" className="text-xs font-bold text-slate-400 dark:text-slate-500 hover:text-orange-600 dark:hover:text-orange-500 transition-colors uppercase tracking-widest">
-                  {s}
-                </a>
-              ))}
+              <a href="https://www.tiktok.com/@mckmission?_r=1&_t=ZS-93pCGUBIp3l" target="_blank" rel="noopener noreferrer" className="text-slate-400 dark:text-slate-500 hover:text-orange-600 dark:hover:text-orange-500 transition-colors">
+                <TikTokIcon className="w-5 h-5" />
+                <span className="sr-only">TikTok</span>
+              </a>
+              <a href="https://www.facebook.com/share/1GK8MHSHPY/" target="_blank" rel="noopener noreferrer" className="text-slate-400 dark:text-slate-500 hover:text-orange-600 dark:hover:text-orange-500 transition-colors">
+                <Facebook className="w-5 h-5" />
+                <span className="sr-only">Facebook</span>
+              </a>
+              <a href="https://www.instagram.com/mckmission?igsh=MWc4ZnlxMGtnaXZodg==" target="_blank" rel="noopener noreferrer" className="text-slate-400 dark:text-slate-500 hover:text-orange-600 dark:hover:text-orange-500 transition-colors">
+                <Instagram className="w-5 h-5" />
+                <span className="sr-only">Instagram</span>
+              </a>
+              <a href="https://youtube.com/@mckmission?si=qg14RCHSxKQYL07Y" target="_blank" rel="noopener noreferrer" className="text-slate-400 dark:text-slate-500 hover:text-orange-600 dark:hover:text-orange-500 transition-colors">
+                <Youtube className="w-5 h-5" />
+                <span className="sr-only">YouTube</span>
+              </a>
             </div>
           </div>
 
