@@ -53,7 +53,7 @@ const Contact: React.FC = () => {
 
               <div className="space-y-6 sm:space-y-8 md:space-y-10">
                 {[
-                  { label: "Missions Hub", val: "Raipur, Chhattisgarh, India", icon: "📍" },
+                  { label: "Missions Hub", val: "Ile-Ife, Osun State Nigeria", icon: "📍" },
                   { label: "Email Support", val: "info@jesus4india.com", icon: "✉️" },
                   { label: "Call Us", val: "+234 912 365 6683", icon: "📞" },
                   { label: "Hours of Prayer", val: "Sun-Sat: 24h Availability", icon: "🕒" },
